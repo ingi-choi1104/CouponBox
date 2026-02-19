@@ -1,0 +1,64 @@
+name: barcode_scanner
+description: "쿠폰 바코드 자동 인식 및 관리 앱 - 쿠폰박스"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.5.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  # Barcode & OCR (ML Kit)
+  google_mlkit_barcode_scanning: ^0.14.0
+  google_mlkit_text_recognition: ^0.15.0
+
+  # Photo Gallery Access
+  photo_manager: ^3.6.0
+
+  # Image Picker (camera / single image)
+  image_picker: ^1.1.2
+
+  # Local Database
+  sqflite: ^2.3.3
+  path: ^1.9.0
+
+  # Background Tasks
+  workmanager: ^0.9.0
+
+  # Local Notifications
+  flutter_local_notifications: ^18.0.0
+
+  # State Management
+  provider: ^6.1.2
+
+  # Utils
+  intl: ^0.20.0
+  path_provider: ^2.1.4
+  permission_handler: ^11.3.1
+  shared_preferences: ^2.3.2
+
+  # UI
+  flutter_slidable: ^3.1.1
+  shimmer: ^3.0.0
+
+  # Ads
+  google_mobile_ads: ^5.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.3
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/icon/
