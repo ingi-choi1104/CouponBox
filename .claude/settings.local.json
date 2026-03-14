@@ -3,7 +3,8 @@
     "allow": [
       "Bash(flutter pub get:*)",
       "Bash(flutter analyze:*)",
-      "Bash(dart run:*)"
+      "Bash(dart run:*)",
+      "Bash(flutter build:*)"
     ]
   }
 }

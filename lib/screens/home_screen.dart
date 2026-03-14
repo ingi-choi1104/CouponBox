@@ -53,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen>
         },
         onAdFailedToLoad: (ad, error) {
           ad.dispose();
-          _bannerAd = null;
+          if (mounted) setState(() => _bannerAd = null);
         },
       ),
     )..load();
@@ -194,13 +194,18 @@ class _HomeScreenState extends State<HomeScreen>
         elevation: 4,
       ),
       bottomNavigationBar: _isBannerAdReady && _bannerAd != null
-          ? SafeArea(
-              child: SizedBox(
-                height: _bannerAd!.size.height.toDouble(),
-                child: AdWidget(ad: _bannerAd!),
+          ? Container(
+              color: Colors.white,
+              child: SafeArea(
+                top: false,
+                child: SizedBox(
+                  width: double.infinity,
+                  height: _bannerAd!.size.height.toDouble(),
+                  child: AdWidget(ad: _bannerAd!),
+                ),
               ),
             )
-          : const SizedBox.shrink(),
+          : null,
     );
   }
 
